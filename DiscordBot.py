@@ -15,7 +15,7 @@ async def on_ready():
 #當有訊息時
 async def on_message(message):
     #排除自己的訊息，避免陷入無限循環
-    if message.author == client.user:
+    if message.author == client.user: #無限迴圈
         return
     #如果包含 ping，機器人回傳 pong
     if message.content == 'Hello':
